@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="contact-section section-padding" id="section_6">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                <div class="contact-info-wrap">
+                    <h2>Get in touch</h2>
+
+                 
+
+                    <div class="contact-info">
+
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3153.3219526837056!2d37.007!3d-0.430589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMjUnNTAuMSJTIDM3wrAwMCcyNS4yIkU!5e1!3m2!1sen!2ske!4v1745494897477!5m2!1sen!2ske" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+                        
+
+                     
+
+
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+
+            <div class="col-lg-5 col-12 mx-auto">
+
+
+
+
+    {% load widget_tweaks %}
+
+<form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <h2>Contact form</h2>
+
+    <p class="mb-4">Send A Message:
+        <a href="mailto:info@kirimara.org">info@kirimara.org</a>
+    </p>
+
+    
+        
+    {{ form.name|add_class:"form-control" }}
+       <br>
+    
+    
+    {{ form.phone|add_class:"form-control" }}
+    <br>
+    {{ form.email|add_class:"form-control" }}
+    <br>
+    {{ form.subject|add_class:"form-control" }}
+    <br>
+    {{ form.message|add_class:"form-control" }}
+    <br>
+
+    <button type="submit" class="form-control">Send Message</button>
+</form>
+
+                
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

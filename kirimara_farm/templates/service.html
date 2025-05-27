@@ -1,0 +1,196 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- <section class="section-padding" id="section_3">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12 text-center mb-4">
+                <h2>What We Do</h2>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/mision2.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Kirimara Estate Coffee </h5>
+
+                            <p>At <strong>Kirimara Coffee Estate</strong> , we take pride in practicing every stage of the coffee harvesting process with care and tradition. From hand-picking ripe cherries to the final drying phase, our methods ensure quality in every bean.</p>
+
+                          <p> <strong>Explore all the stages and view our gallery to see the craft behind every cup.</strong> </p>
+                           
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/coffee2.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Community Development</h5>  
+
+                            <p>Our mission goes beyond producing exceptional coffee — we are deeply rooted in uplifting the local community. By employing and training local farmers, supporting youth empowerment programs, and investing in sustainable agricultural practices, we create lasting impact where it matters most.</p>
+
+                           
+
+                   
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/coffee4.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Our Nursery</h5>
+
+                            <p> Every great harvest begins with a healthy seed. Our nursery is the heart of our sustainability efforts — where we carefully cultivate resilient, high-quality coffee seedlings using eco-friendly practices.
+
+                                We provide training to local farmers on seed selection, disease-resistant varieties, and soil management to promote long-term productivity. By distributing seedlings to smallholder farmers and community cooperatives, we help improve yields, increase incomes, and ensure the future of specialty coffee in our region.</p>
+
+                       
+
+          
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<br><br>
+        <div class="row">
+
+            
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/mision.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Educational and Training Services </h5>
+
+                            <p>We believe knowledge is just as vital as the soil we plant in. Our farm serves as a living classroom — offering hands-on educational programs and training workshops for aspiring farmers, students, and coffee enthusiasts.</p>
+
+                           
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/coffee3.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Value-Added Product Development</h5>  
+
+                            <p>At <strong>Kirimara Coffee Estate</strong> , sustainability doesn’t stop at the harvest. We transform coffee pulp and other natural by-products into nutrient-rich organic manure—a powerful, eco-friendly fertilizer that nourishes our soil and reduces waste.</p>
+
+                           
+
+                   
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/coffee2.jpg" class="custom-block-image img-fluid" alt="">
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">Agro-Tourism / Eco-Tourism</h5>
+
+                            <p>  Through every visit, we promote environmental awareness and community development while showcasing the beauty and purpose behind responsible farming.</p>
+
+                       
+
+          
+                        </div>
+
+                        <a href="donate.html" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section> -->
+<!-- dynamic -->
+
+
+
+<section class="section-padding" id="section_3">
+    <div class="container">
+        <div class="col-lg-12 col-12 text-center mb-4">
+            <h2>What We Do</h2>
+
+            <p>Kirimara Coffee Estate is dedicated to producing exceptional coffee while maintaining a deep commitment to sustainability and community development. From hand-picking the finest cherries to carefully drying each bean, every stage of the coffee harvesting process is performed with care and tradition. Beyond coffee production, the estate is deeply involved in uplifting the local community, providing employment, training, and supporting youth empowerment programs.</p>
+        </div>
+
+        <!-- Start the row for the images here -->
+        
+        <div class="row">
+           
+            {% for image in images %}
+            
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <a href="{% url 'image_detail' image.id %}" class="custom-block-image img-fluid">                  
+                        <img src="{{ image.image.url }}" class="custom-block-image img-fluid equal-size" alt="{{ image.title }}">
+                    </a>
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">{{ image.title }}</h5>
+                            <p>At <strong>Kirimara Coffee Estate</strong>, {{ image.description }}</p>
+                            <p><strong>Explore all the stages and view our gallery to see the craft behind every cup.</strong></p>
+                        </div>
+
+                        <a href="{% url 'image_detail' image.id %}" class="custom-btn btn">Details And Gallery</a>
+                       
+                    </div>
+                   
+                </div>
+                <br><br><br>
+            </div>
+           
+            {% endfor %}
+        </div> <!-- Close the row here -->
+        <br><br><br>
+    </div>
+</section>
+
+<style>
+    .equal-size {
+        width: 100%; /* Ensure the images take full width of the column */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensures images cover the area without distorting their aspect ratio */
+    }
+</style>
+
+
+ {% endblock %}
+
+
