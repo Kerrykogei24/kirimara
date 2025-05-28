@@ -1,9 +1,9 @@
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-light shadow-lg  position: sticky">
+<nav class="navbar navbar-expand-lg bg-light shadow-lg position-sticky">
     <div class="container">
         <a class="navbar-brand" href="{% url 'homepage' %}">
             <img src="/static/images/icons/coffee.png" class="logo img-fluid" alt="Kirimara coffee">
-            <span>
+            <span style="font-size: small;">
                 KIRIMARA COFFEE ESTATE
                 <small>For Quality Coffee</small>
             </span>
@@ -15,39 +15,25 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link click-scroll" href="{% url 'homepage' %}">Home</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
                     <a class="nav-link click-scroll" href="{% url 'about' %}">About</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {% if request.path == '/services/' %}active{% endif %}">
                     <a class="nav-link click-scroll" href="{% url 'services' %}">Services</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'gallery' %}"> Our Galley</a>
+                <li class="nav-item {% if request.path == '/gallery/' %}active{% endif %}">
+                    <a class="nav-link click-scroll" href="{% url 'gallery' %}">Our Gallery</a>
                 </li>
 
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="news.html">News Listing</a></li>
-
-                        <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
-                    </ul>
-                </li> -->
-
-                <li class="nav-item">
+                <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
                     <a class="nav-link click-scroll" href="{% url 'contact' %}">Contact</a>
                 </li>
-
-                <!-- <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"></a>
-                </li> -->
             </ul>
         </div>
     </div>
