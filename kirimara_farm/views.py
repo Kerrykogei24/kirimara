@@ -13,7 +13,7 @@ from itertools import zip_longest
 # Create your views here.
 
 from django.views.generic import ListView,DetailView
-from .models import  Image,Contact
+from .models import  Image,Contact,Gallery
 
 
 
@@ -108,7 +108,8 @@ def about(request):
 
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    images = Gallery.objects.all()
+    return render(request, 'gallery.html',{'images': images})
 
 
 def services(request):

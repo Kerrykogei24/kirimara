@@ -8,182 +8,44 @@
                 <h2>KIRIMARA ESTATE GALLERY</h2>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/kirimarawakers2.jpeg" class="custom-block-image img-fluid" alt="">
 
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebeans.jpeg" class="custom-block-image img-fluid" alt="">
-
+            <div class="row">
+           
+                {% for image in images %}
                 
-                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="custom-block-wrap">
+                        <a href="" class="custom-block-image img-fluid">                  
+                            <img src="{{ image.image.url }}" class="custom-block-image img-fluid equal-size" alt="{{ image.image.url }}">
+                        </a>
+    
+                     
+                           
+                        </div>
+
+                  
+                            <button class="form-control btn btn-dark btn-sm rounded-pill" width="50px">{{image.created_at}}</button>
+
+
+                     
+
+                    </div>
+                    
+
+                {% endfor %}
+                <br><br>
+             
             </div>
+           
 
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/kirimaraworkers3.jpeg" class="custom-block-image img-fluid" alt="">
 
-         
-                </div>
-            </div>
-
-        </div>
-<br><br>
-        <div class="row">
-
-            
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed1.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed2.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed3.jpeg" class="custom-block-image img-fluid" alt="">
-
-         
-                </div>
-            </div>
-
-        </div>
+  
 
 
     </div>
-    <br><br>
-
-    <div class="container">
-        <div class="row">
-
-       
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/nursery.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed6.jpeg" class="custom-block-image img-fluid" alt="">
-
-                
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed7.jpeg" class="custom-block-image img-fluid" alt="">
-
-         
-                </div>
-            </div>
-
-        </div>
-<br><br>
-        <div class="row">
-
-            
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeebed8.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/coffeestore.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/estateview.jpeg" class="custom-block-image img-fluid" alt="kirimara farm estate pics">
-
-         
-                </div>
-            </div>
-
-        </div>
+    
 
 
-    </div>
-    <br><br>
-
-    <div class="container">
-        <div class="row">
-
-       
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/kirimaratree.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/estateview.jpeg" class="custom-block-image img-fluid" alt="">
-
-                
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/picking.jpeg" class="custom-block-image img-fluid" alt="">
-
-         
-                </div>
-            </div>
-
-        </div>
-<br><br>
-        <div class="row">
-
-            
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/farmview.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/farmview2.jpeg" class="custom-block-image img-fluid" alt="">
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="custom-block-wrap">
-                    <img src="/static/images/kirimara pics/kirimaraworkers4.jpeg" class="custom-block-image img-fluid" alt="kirimara farm estate pics">
-
-         
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
 </section>
 
  {% endblock %}
