@@ -378,7 +378,7 @@ strong {
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   height: auto;
 }
 
@@ -1681,9 +1681,6 @@ blockquote::before {
     width: 25px; 
     height: 25px;
   }
-  .logo {
-    width: 25px; 
-    height: 25px;
-  }
+
 }
 
