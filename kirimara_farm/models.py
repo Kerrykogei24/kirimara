@@ -20,6 +20,13 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.image.name
+    
+class Video(models.Model):
+    video = models.FileField(upload_to='gallery/videos/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.video.name
    
 
 

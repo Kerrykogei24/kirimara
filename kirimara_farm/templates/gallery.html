@@ -8,6 +8,21 @@
                 <h2>KIRIMARA ESTATE GALLERY</h2>
             </div>
 
+            <div class="row">
+                {% for item in videos %}
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="custom-block-wrap text-center">
+                        <video width="100%" height="auto" controls class="equal-size">
+                            <source src="{{ item.video.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="form-control btn btn-dark btn-sm rounded-pill mt-2">{{ item.created_at }}</button>
+                        <p><small>Kirimara Coffee Estate</small></p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
 
             <div class="row">
            
@@ -37,6 +52,9 @@
                 <br><br>
              
             </div>
+
+          
+   
            
 
 
